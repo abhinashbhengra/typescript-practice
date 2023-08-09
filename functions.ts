@@ -78,4 +78,9 @@ function consoleError1(errmsg: string): void {
   console.log(errmsg);
 }
 
+function handleError(errmsg: string): never {
+  throw new Error(errmsg);
+}
+// type 'never' to make error more robust and handling
+
 export {};
