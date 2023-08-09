@@ -11,10 +11,12 @@ addTwo("5"); // should not be allowed
 function addThree(num: number) {
   return num + 3;
 }
+addThree(5);
+// addThree('5') -- Argument of type 'string' is not assignable to parameter of type 'number'
 
 // on more case
 function addFour(num: number) {
-  return "Hello"; // instead for return number it is returning string -- avoid this
+  return "Hello"; // instead of returning number type it is returning string -- avoid this
 }
 addFour(5);
 
@@ -24,9 +26,6 @@ function addFour1(num: number): number {
   return num + 4;
 }
 addFour1(5);
-
-addThree(5);
-// addThree('5') -- Argument of type 'string' is not assignable to parameter of type 'number'
 
 function getUpper(val) {
   return val.toUpperCase();
@@ -56,6 +55,7 @@ signIn("abhi", "test@test.com");
 // Arrow funciton
 const getHello = (s: string): string => {
   return "";
+  //   return 1 -- Type 'number' is not assignable to type 'string'
 };
 
 const games = ["cricket", "hockey", "football"];
