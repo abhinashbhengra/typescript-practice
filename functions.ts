@@ -58,4 +58,16 @@ const getHello = (s: string): string => {
   return "";
 };
 
+const games = ["cricket", "hockey", "football"];
+games.map((game) => {
+  // ts knows the type of incoming context 'game'. so there is no need of mentioning the type. I can rely on ts
+  return `game is ${game}`;
+});
+
+// In above code map can return any type -- to handle those cases - mention function type
+games.map((game): string => {
+  // return 1 -- not allowed -- Type 'number' is not assignable to type 'string'
+  return `game is ${game}`;
+});
+
 export {};
