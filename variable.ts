@@ -15,6 +15,7 @@ let luckyNumber = 1;
 
 // boolean
 let isLoggedIn: boolean = false;
+// isLoggedIn = 1 -- Type 'number' is not assignable to type 'boolean'
 
 //any
 
@@ -32,6 +33,7 @@ let guitar1: string;
 
 function getGuitar1() {
   return "Ibanez";
+  // return 1; -- Type 'number' is not assignable to type 'string'
 }
 
 guitar1 = getGuitar1(); // return string type -- cannot return any other type
