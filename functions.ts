@@ -64,10 +64,18 @@ games.map((game) => {
   return `game is ${game}`;
 });
 
-// In above code map can return any type -- to handle those cases - mention function type
+// In above code map method can return any type -- to handle those cases - mention function return type
 games.map((game): string => {
   // return 1 -- not allowed -- Type 'number' is not assignable to type 'string'
   return `game is ${game}`;
 });
+
+function consoleError(errmsg: string) {
+  console.log(errmsg);
+}
+// correction -- void type
+function consoleError1(errmsg: string): void {
+  console.log(errmsg);
+}
 
 export {};

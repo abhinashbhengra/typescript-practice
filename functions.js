@@ -45,3 +45,21 @@ function signIn(username, password, isPaid) {
 }
 // signIn('abhi', 'test@test.com') -- An argument for 'isPaid' was not provided.
 signIn("abhi", "test@test.com");
+// Arrow funciton
+var getHello = function (s) {
+    return "";
+};
+var games = ["cricket", "hockey", "football"];
+games.map(function (game) {
+    // ts knows the type of incoming context 'game'. so there is no need of mentioning the type. I can rely on ts
+    return "game is ".concat(game);
+});
+// In above code map method can return any type -- to handle those cases - mention function return type
+games.map(function (game) {
+    // return 1 -- not allowed -- Type 'number' is not assignable to type 'string'
+    return "game is ".concat(game);
+});
+function consoleError(errmsg) {
+    console.log(errmsg);
+}
+consoleError("not connected");
