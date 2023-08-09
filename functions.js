@@ -10,6 +10,17 @@ addTwo("5"); // should not be allowed
 function addThree(num) {
     return num + 3;
 }
+// on more case
+function addFour(num) {
+    return "Hello"; // instead for return number it is returning string -- avoid this
+}
+addFour(5);
+// correction --  function return type
+function addFour1(num) {
+    //   return 'hello' -- not allowed - Type 'string' is not assignable to type 'number'
+    return num + 4;
+}
+addFour1(5);
 addThree(5);
 // addThree('5') -- Argument of type 'string' is not assignable to parameter of type 'number'
 function getUpper(val) {

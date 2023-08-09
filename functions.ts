@@ -12,6 +12,19 @@ function addThree(num: number) {
   return num + 3;
 }
 
+// on more case
+function addFour(num: number) {
+  return "Hello"; // instead for return number it is returning string -- avoid this
+}
+addFour(5);
+
+// correction --  function return type
+function addFour1(num: number): number {
+  //   return 'hello' -- not allowed - Type 'string' is not assignable to type 'number'
+  return num + 4;
+}
+addFour1(5);
+
 addThree(5);
 // addThree('5') -- Argument of type 'string' is not assignable to parameter of type 'number'
 
@@ -39,5 +52,10 @@ signUpUser1("abhinash", "test@test.com", false);
 function signIn(username: string, password: string, isPaid: boolean = false) {}
 // signIn('abhi', 'test@test.com') -- An argument for 'isPaid' was not provided.
 signIn("abhi", "test@test.com");
+
+// Arrow funciton
+const getHello = (s: string): string => {
+  return "";
+};
 
 export {};
