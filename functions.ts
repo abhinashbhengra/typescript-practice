@@ -81,7 +81,7 @@ function consoleError1(errmsg: string): void {
 function handleError(errmsg: string): never {
   throw new Error(errmsg);
 }
-handleError("Unable to fetch data");
+handleError("failed to fetch data");
 // type 'never' to make error more robust and handling
 
 export {};
